@@ -9,6 +9,7 @@ import { Button } from '@rneui/themed';
 import { initializeApp } from "firebase/app";
 
 import Navigation from './config/navigation/Navigation';
+import Profile from './module/profile/adapters/screens/Profile';
 //view es la primera es la primera en renderizar
 
 //styleSheets son componentes
@@ -31,6 +32,7 @@ const app = initializeApp(firebaseConfig);
     //un view es igual que ver un div
     //aqui las clases se llaman style
     <Navigation/>
+
   );
   
 }

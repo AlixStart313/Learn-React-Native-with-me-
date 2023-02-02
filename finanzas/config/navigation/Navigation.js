@@ -9,18 +9,20 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 //iconos
 import { Icon } from '@rneui/base'
 
-import Profile from '../../module/profile/adapters/screens/Profile'
-import About from '../../module/about/adapters/screens/About'
+//import Profile from '../../module/profile/adapters/screens/Profile'
+import ProfileStack from './stack/ProfileStack'
+import AboutStack from './stack/AboutStack'
 
-const Tab =createBottomTabNavigator()
+//import About from '../../module/about/adapters/screens/About'
+
+const Tab =createBottomTabNavigator();
 
 
 export default function Navigation() {
   return (
-    //tambien tendremos etiquetas de incio-fin y etiquetas de autocierre
+    
     <NavigationContainer>
-        <Text>A las propiedades se les conoce como props
-        si no definimos un initialRouteName se ejecutara el primer Tab.screen que este debajo</Text>
+        
        <Tab.Navigator   initialRouteName='profile' 
        screenOptions={({route}) => ({tabBarIcon:({color})=>
        //route es mi Tab.Screen 
@@ -33,18 +35,20 @@ export default function Navigation() {
     })}
     >
         <Tab.Screen
-        name='profile'
+        name='Profile'
         options={{title:'Perfil'}}
         //que vista se debe de renderizar
-        component={Profile}
+        component={ProfileStack}
         />
+
         <Tab.Screen
-        name='about'
+        name='About'
         //el title es el que se pone en la parte de abajo y bajo el icono
         options={{title:'conocenos'}}
         //que vista se debe de renderizar
-        component={About}
+        component={AboutStack}
         />
+
        </Tab.Navigator>
     </NavigationContainer>
   )
@@ -54,10 +58,10 @@ export default function Navigation() {
 const screenOptions=(route,color)=>{
     let iconName;
     switch(route.name){
-        case 'profile':
+        case 'Profile':
             iconName='account-circle-outline';
         break;
-        case 'about':
+        case 'About':
             iconName='information';
         break;
 

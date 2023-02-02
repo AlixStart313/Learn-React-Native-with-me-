@@ -1,0 +1,19 @@
+ejecutar npm i al momento de abrir el proyecto
+
+
+creamos dos carpetas, config y kernel
+
+componente mayuscula funcion miniscula
+
+rnf= nuestro nuevo psvm
+
+
+en auth se tiene todo lo relacionado al control de acceso
+
+config sn configuraciones globales, toda configracoi dentro de la AppEntry
+
+kernel todo lo que pueda reutilizar en nuestra app
+
+modules son nuestros casos de uso
+
+cada que querramos agregar una nueva opcion en el menu, debemos de agregar un Tab.screen

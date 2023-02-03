@@ -17,3 +17,9 @@ kernel todo lo que pueda reutilizar en nuestra app
 modules son nuestros casos de uso
 
 cada que querramos agregar una nueva opcion en el menu, debemos de agregar un Tab.screen
+
+//tambien tendremos etiquetas de incio-fin y etiquetas de autocierre<Text>A las propiedades se les conoce como props
+        //si no definimos un initialRouteName se ejecutara el primer Tab.screen que este debajo</Text>
+nativeEvente es la interaccion que tiene el usauria
+
+el errorMesasage detecta si un campo esta acio y lo marca de coolor rojo
